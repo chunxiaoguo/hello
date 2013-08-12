@@ -1,0 +1,14 @@
+Vim的设置在vimrc文件中，在系统的/etc目录下面。另外每个用户的~目录下，如果也存在一个.vimrc文件，那么系统就按照此文件进行设置。
+编辑 .vimrc(_vimrc),在开头加上：
+let $LANG="zh_CN.UTF-8"
+set fileencodings=utf-8,chinese,latin-1
+set termencoding=gbk
+set fileencoding=utf-8
+set encoding=utf-8然后就OK了。
+如果配置文件中已经存在类似的设置，那么根据实际情况修改。
+ 
+如果还是乱码，继续检查Linux的设置
+打开/etc/sysconfig/i18n
+把LANG改成支持UTF-8的字符集
+如：LANG=”zh_CN.UTF-8″
+或者是 LANG=”en_US.UTF-8″
